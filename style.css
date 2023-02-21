@@ -1,0 +1,173 @@
+/*Primary*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/*Header*/
+header{
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    display: grid;
+    place-content: center;
+    padding: 2em;
+}
+
+header nav{
+    display: flex;
+    gap: 4em;
+}
+
+header nav a{
+    font-size: 1.5em;
+    text-decoration: none;
+    color: rgb(59, 17, 21);
+}
+
+header nav a:hover{
+    text-decoration: underline;
+}
+
+/*Main*/
+.main-section{
+    height: 100vh;
+    padding: 2em;
+}
+
+.main-title{
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.main-text{
+    font-size: 1.5em;
+    line-height: 200%;
+}
+
+
+/*First View*/
+#first-view{
+    display: grid;
+    place-content: center;
+    background: url(/media/chess-background.jpg);
+    background-size: cover;
+}
+
+#first-view h1{
+    font-size: 10em;
+    color: #fff;
+    text-shadow: rgb(59, 17, 21) 3px 0px 0px, rgb(59, 17, 21) 2.83487px 0.981584px 0px, rgb(59, 17, 21) 2.35766px 1.85511px 0px, rgb(59, 17, 21) 1.62091px 2.52441px 0px, rgb(59, 17, 21) 0.705713px 2.91581px 0px, rgb(59, 17, 21) -0.287171px 2.98622px 0px, rgb(59, 17, 21) -1.24844px 2.72789px 0px, rgb(59, 17, 21) -2.07227px 2.16926px 0px, rgb(59, 17, 21) -2.66798px 1.37182px 0px, rgb(59, 17, 21) -2.96998px 0.42336px 0px, rgb(59, 17, 21) -2.94502px -0.571704px 0px, rgb(59, 17, 21) -2.59586px -1.50383px 0px, rgb(59, 17, 21) -1.96093px -2.27041px 0px, rgb(59, 17, 21) -1.11013px -2.78704px 0px, rgb(59, 17, 21) -0.137119px -2.99686px 0px, rgb(59, 17, 21) 0.850987px -2.87677px 0px, rgb(59, 17, 21) 1.74541px -2.43999px 0px, rgb(59, 17, 21) 2.44769px -1.73459px 0px, rgb(59, 17, 21) 2.88051px -0.838247px 0px;
+    animation: first-title-anim 3s forwards;
+}
+
+/*About*/
+#about-title{
+    opacity: 0;
+}
+
+#about-text{
+    opacity: 0;
+}
+
+#image-content{
+    visibility: hidden;
+    display: flex;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 2em;
+    box-shadow: 5px 5px 15px #aaa;
+}
+
+#image-content > img{
+    width: 40%;
+}
+
+#image-content > ul{
+    list-style: none;
+    text-align: center;
+    font-size: 2em;
+    margin: auto;
+}
+
+
+/*Contact*/
+#contact{
+    background-color: #d2d2d2;
+}
+
+#contact form{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 75%;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 2em;
+    border-radius: 3px;
+    box-shadow: 5px 5px 15px #333;
+}
+
+/*Animationer*/
+.title-anim{
+    animation: title-anim 4s forwards;
+}
+
+.image-content-anim{
+    animation: image-anim 3s forwards 1s;
+}
+
+.text-anim{
+    animation: text-anim 2s forwards 2s;
+}
+
+@keyframes first-title-anim{
+    0%{
+        transform: scale(0%);
+    }
+    100%{
+        transform: scale(100%);
+    }
+}
+
+@keyframes title-anim{
+    0%{
+        transform: translate(-100%);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translate(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes image-anim{
+    0%{
+        visibility: visible;
+        transform: translate(150%);
+    }
+    100%{
+        transform: translate(0%);
+        visibility: visible;
+    }
+}
+
+@keyframes text-anim{
+    0%{
+        transform: scale(0%);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(100%);
+        opacity: 1;
+    }
+}
